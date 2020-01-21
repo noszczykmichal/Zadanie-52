@@ -1,7 +1,7 @@
 function takeData(){
-    let firstname=window.prompt('Podaj imię: ');
-    let lastname=window.prompt('Podaj nazwisko: ');
-    let email=window.prompt('Podaj adres E-mail: ');
+    let firstname=window.prompt('Podaj imię: ').trim();
+    let lastname=window.prompt('Podaj nazwisko: ').trim();
+    let email=window.prompt('Podaj adres E-mail: ').trim();
 
     // console.log(firstname);
 
@@ -13,6 +13,16 @@ function takeData(){
 
     let inputEmail=document.getElementById('email');
     inputEmail.value=email;
+
+    if(firstname === '' ){
+        inputFirstName.value= 'Błąd';
+    }
+    if(lastname === ''){
+        inputLastName.value= 'Błąd';
+    }
+    if(email === ''){
+        inputEmail.value= 'Błąd';
+    }
  }
 
 takeData();
